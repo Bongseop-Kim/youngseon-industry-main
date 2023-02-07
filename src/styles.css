@@ -1,0 +1,714 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+}
+
+.wrap * {
+  position: relative;
+}
+
+div,
+figure,
+.group,
+dt,
+dd,
+ul,
+li,
+ol,
+p,
+h1,
+h2,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+ol,
+ul,
+li,
+.group,
+dt,
+dd {
+  list-style: none;
+}
+
+h1,
+h2,
+p,
+span,
+button {
+  font-size: inherit;
+}
+
+a,
+button {
+  text-decoration: none;
+  color: #000;
+}
+
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.area {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* .wrap {
+    max-width: 1300px;
+    margin: 0 auto;
+} */
+
+.area {
+  padding: 0 10px;
+}
+
+.item_cont > input.fild_off,
+.modal input.fild_off,
+.fild_off {
+  background-color: #eee;
+  border-color: #eee;
+  color: #000;
+}
+
+.section {
+  margin-top: 56px;
+  margin-bottom: 148px;
+}
+
+.gnb_bar ul,
+.col {
+  display: flex;
+}
+
+.gnb_bar > .area {
+  justify-content: space-between;
+}
+
+.gnb_bar {
+  border-bottom: 1px solid #555;
+}
+
+.gnb_bar li {
+  padding: 20px 14px;
+}
+
+.tab ul {
+  display: flex;
+  justify-content: space-between;
+  float: left;
+}
+
+.tab {
+  padding: 24px 0;
+}
+
+.flexedclear::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.tab li {
+  margin-right: 24px;
+}
+
+.tab li:last-child {
+  margin-right: 0;
+}
+
+.tab a {
+  border: 1px solid #000;
+  padding: 10px 24px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.tab .write {
+  float: right;
+}
+
+.tab .active a {
+  background-color: #000;
+  color: #ddd;
+}
+
+.board {
+  width: 100%;
+  border-top: 1px solid #000;
+  font-size: 0;
+}
+
+.board_list > div {
+  border-bottom: 1px solid #ddd;
+}
+
+.board_list > div:last-child,
+.board_header {
+  border-bottom: 1px solid #000;
+}
+
+.board_header > div,
+.board_list > div > div {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 15px 0;
+  word-break: break-all;
+}
+
+.board_header div,
+.board_list > div div {
+  font-size: 1rem;
+}
+
+.board_header {
+  font-weight: 700;
+}
+
+.board .num {
+  width: 10%;
+}
+
+.board .tit {
+  width: 60%;
+  text-align: left;
+}
+
+.board .date {
+  width: 10%;
+}
+
+.board .count {
+  width: 10%;
+}
+
+.board .name {
+  width: 10%;
+}
+
+.paging {
+  text-align: center;
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.paging a {
+  display: inline-block;
+  box-sizing: border-box;
+  line-height: 2rem;
+  vertical-align: middle;
+  padding: 0 12px;
+}
+
+.paging .prev,
+.paging .next {
+  padding: 0 1rem;
+}
+
+.page_num {
+  display: flex;
+  width: 10rem;
+  justify-content: space-evenly;
+}
+
+.paging .prev::after,
+.paging .next::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  width: 1px;
+  background-color: #555;
+  height: 1rem;
+  transform: translateY(-50%);
+}
+
+.paging .prev::after {
+  right: 0;
+}
+
+.paging .next::before {
+  left: 0;
+}
+
+/* 글쓰기 페이지 */
+.board_write {
+  border-top: 1px solid #000;
+}
+
+.board_write,
+.bt_wrap {
+  padding-top: 20px;
+}
+
+.board_write .cont textarea {
+  display: block;
+  width: 100%;
+  height: 250px;
+  padding: 15px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.board_write .title input,
+.board_write .info input,
+.board_write .cont input,
+.cmt_write input,
+.modal input,
+.group input {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+/* .cmt_write textarea,
+.board_write .cont textarea,
+.board_write .title input,
+.board_write .info input,
+.board_write .cont input,
+.cmt_write input, */
+.modal input,
+.group input {
+  border: 1px solid #000;
+}
+
+.cmt_write textarea {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  min-height: 4em;
+  overflow: hidden;
+  resize: none;
+}
+
+.board_write .info .item_tit,
+.board_rewrite_con .info .item_tit {
+  font-size: 1rem;
+}
+
+.board_write .title .group,
+.board_write .info .group,
+.board_write .cont .group,
+.board_rewrite_con .info .group {
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
+}
+
+.board_write .cont .group {
+  align-items: flex-start;
+}
+
+.board_write .info,
+.board_rewrite_con .info {
+  font-size: 0;
+  display: flex;
+  column-gap: 16px;
+  flex-wrap: wrap;
+  padding: 10px 0;
+}
+
+.board_write .info .group,
+.board_rewrite_con .info .group {
+  flex: 1;
+}
+
+.board_write .title .item_tit,
+.board_write .info .item_tit,
+.board_write .cont .item_tit,
+.board_rewrite_con .info .item_tit {
+  width: 100px;
+}
+
+.board_write .item_tit,
+.board_rewrite_con .item_tit {
+  font-weight: 700;
+}
+
+.board_write .title .item_cont,
+.board_write .cont .item_cont,
+.board_write .info .item_cont,
+.board_rewrite_con .info .item_cont {
+  width: calc(100% - 100px);
+}
+
+.board_write .cont span {
+  width: 100%;
+  display: block;
+  text-align: right;
+  font-size: 0.9rem;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+}
+
+.board_write .cont::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.bt_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bt_wrap .left_wrap {
+  display: flex;
+}
+
+.bt_wrap .btn {
+  margin-left: 12px;
+}
+
+.bt_wrap .right {
+  text-decoration: underline;
+}
+
+.bt_wrap .btn a,
+.bt_wrap .btn button {
+  width: 100px;
+  padding: 16px 0;
+}
+
+.btn a,
+.btn button {
+  border: 1px solid #000;
+  display: block;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.bt_wrap .btn:last-child a,
+.bt_wrap .btn:last-child button {
+  background: #000;
+  color: #fff;
+}
+
+/* 글보기 페이지 */
+
+.board_view .info,
+.board_view .group,
+.board_view .item_tit {
+  display: flex;
+  align-items: center;
+}
+
+.board_view .info .group {
+  margin-right: 10px;
+}
+
+.board_view .info {
+  font-size: 0.8rem;
+  color: #666;
+  flex-wrap: wrap;
+  padding-top: 8px;
+}
+
+.board_view .info .item_tit::after {
+  content: "|";
+  font-size: 0.25rem;
+  text-align: center;
+  margin: 3px;
+}
+
+.board_view,
+.board_rewrite_con {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.board_view .title,
+.board_rewrite_con .title {
+  border-bottom: 1px solid #ddd;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.board_view .cont {
+  padding: 24px 0;
+}
+
+.view_bt_wrap .left_wrap {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 0;
+  gap: 10px;
+}
+
+.view_bt_wrap a,
+.cmt_write .btn a,
+.view_bt_wrap button,
+.cmt_write .btn button {
+  padding: 12px 14px;
+  width: 100%;
+  height: 100%;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.cmt_wrap .tab {
+  border-bottom: 1px solid #000;
+}
+
+.cmt_list .name,
+.cmt_write .cont,
+.cmt_write .name,
+.cmt_write .psword {
+  font-weight: 700;
+}
+
+.cmt_list > div {
+  border-bottom: 1px solid #ddd;
+  padding: 1.5rem 0;
+}
+
+.cmt_list .del {
+  font-size: 0.8rem;
+  padding-left: 0.5rem;
+}
+
+.cmt_list .cont {
+  padding-top: 0.8rem;
+}
+
+.cmt_write {
+  padding: 1.5rem 0; /*24px*/
+  margin-bottom: 2rem;
+}
+
+.cmt_write .info_g {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.cmt_write .group {
+  display: flex;
+  align-items: center;
+  flex: 48.5%;
+  margin-top: 0.8rem;
+}
+
+.cmt_write .item_tit {
+  width: 100px;
+}
+
+.cmt_write .item_cont {
+  width: calc(100% - 100px);
+}
+
+.cmt_write .btn {
+  padding-top: 1rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 15;
+  font-weight: 700;
+}
+
+.modal_overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.modal_content {
+  background-color: #fff;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.hidden {
+  display: none;
+}
+
+.modal button.close {
+  border: none;
+  font-size: 0;
+}
+
+.modal_content .md_tit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #000;
+  padding-bottom: 1rem;
+}
+
+.modal_content .md_tit button {
+  width: auto;
+  padding: 0;
+}
+
+.md_input,
+.md_tit,
+.md_cont {
+  text-align: left;
+  display: block;
+}
+
+.md_input > div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.2rem;
+  row-gap: 0.5rem;
+}
+
+.md_input > div > div:first-child {
+  width: 5rem;
+}
+
+.md_cont {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal .confirm {
+  margin-top: 1.6rem;
+  font-weight: 700;
+  background-color: #000;
+  color: #fff;
+  max-width: 20rem;
+}
+
+.modal button.confirm {
+  width: 100%;
+}
+
+.fild_off:focus {
+  outline: none;
+}
+
+/*글 수정 확인 페이지*/
+.board_rewrite_con .title .group {
+  height: 5rem;
+}
+
+/* 반응형 */
+@media (max-width: 1000px) {
+  .board .num,
+  .board .name,
+  .board .count {
+    display: none;
+  }
+
+  html {
+    font-size: 0.9rem;
+  }
+
+  .tab ul {
+    padding-bottom: 24px;
+  }
+
+  .tab li {
+    margin-right: 10px;
+  }
+
+  .tab a,
+  .tab button {
+    padding: 10px;
+  }
+
+  .board .tit {
+    width: 80%;
+    padding: 0 1%;
+  }
+
+  .date {
+    width: 16%;
+  }
+
+  /*글쓰기*/
+
+  .board_write .info .group,
+  .board_rewrite_con .info .group {
+    flex: 100%;
+  }
+
+  /*글보기*/
+  .board_view .count {
+    display: none;
+  }
+
+  .cmt_write .info_g {
+    flex-wrap: wrap;
+  }
+
+  .md_input > div > div {
+    width: 100%;
+  }
+}
+
+/* 웹 크기일 때*/
+@media (min-width: 1024px) {
+  .board_view,
+  .board_view .title {
+    display: grid;
+    grid-template-columns: 5fr minmax(0, 66fr) 5fr;
+    align-items: baseline;
+  }
+
+  .board_view .title {
+    grid-template-areas:
+      "count tit tit"
+      " .  info info ";
+  }
+
+  .board_view {
+    grid-template-areas:
+      "title title title"
+      " .  cont . ";
+  }
+
+  .board_view .title {
+    grid-area: title;
+  }
+
+  .board_view .count {
+    grid-area: count;
+    place-self: center;
+    width: fit-content;
+  }
+
+  .board_view .info {
+    grid-area: info;
+  }
+
+  .board_view .tit {
+    grid-area: tit;
+  }
+
+  .board_view .cont {
+    grid-area: cont;
+  }
+
+  .cmt_write .info_g .group {
+    flex: 100%;
+  }
+}

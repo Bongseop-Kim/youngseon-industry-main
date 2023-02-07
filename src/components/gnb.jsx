@@ -32,6 +32,11 @@ export default function Gnb() {
             견적 문의
           </Link>
         </li>
+        <li>
+          <Link to="/community" className="navBar_menu_menu">
+            게시판
+          </Link>
+        </li>
       </ul>
 
       <button id="menu-btn" class="block hamberger md:hidden focus:outline-none">
