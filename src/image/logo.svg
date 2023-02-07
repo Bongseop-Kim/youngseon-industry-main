@@ -1,0 +1,15 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve">
+ <desc>Created with Fabric.js 4.6.0</desc>
+
+ <g>
+  <title>Layer 1</title>
+  <path fill="#fff" stroke="#000" opacity="NaN" d="m558.47628,883.28756l40.47691,17.62094l-40.47691,-17.62094z" id="svg_2"/>
+  <g stroke="null" id="svg_8">
+   <g stroke="null" id="svg_6">
+    <text stroke="#000" transform="matrix(1.92803 0 0 1.92803 -234.004 -220.668)" xml:space="preserve" text-anchor="start" font-family="'Oxanium'" font-size="240" id="svg_4" y="308.75405" x="155.13514" stroke-width="0" fill="#007fff">Y</text>
+    <text stroke="#000" transform="matrix(1.92803 0 0 1.92803 -234.004 -220.668)" xml:space="preserve" text-anchor="start" font-family="'Oxanium'" font-size="160" id="svg_5" y="307.75405" x="254.13514" stroke-width="0" fill="#00007f">S</text>
+   </g>
+   <text stroke="#00007f" transform="matrix(1.92803 0 0 1.92803 -234.004 -220.668)" stroke-width="3" xml:space="preserve" text-anchor="start" font-family="'Oxanium'" font-size="40" id="svg_7" y="353.75405" x="178.54139" fill="#00007f">industry</text>
+  </g>
+ </g>
+</svg>
