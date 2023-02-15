@@ -1,11 +1,11 @@
 import React from "react";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Design from "./pages/Design";
 import Home from "./pages/Home";
 import HomeMap from "./pages/HomeMap";
 import Equipment from "./pages/Equipment";
 import Gnb from "./components/gnb";
 import Fotter from "./components/fotter";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
 import ContactForm from "./pages/Contact";
 import View from "./components/community/View";
 import Write from "./components/community/Write";

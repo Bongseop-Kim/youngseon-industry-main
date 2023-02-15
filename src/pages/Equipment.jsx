@@ -1,8 +1,27 @@
+import React from "react";
 import sohanRed from "../image/sohanRed.jpeg";
 import sohanBlue from "../image/sohanBlue.jpeg";
 import sohanBlack from "../image/sohanBlack.jpeg";
 import post from "../image/post.jpeg";
-import rectangle from "../image/rectangle.png";
+
+const products = [
+  {
+    name: "소언한복",
+    image: sohanRed,
+  },
+  {
+    name: "소언한복",
+    image: sohanBlue,
+  },
+  {
+    name: "소언한복",
+    image: sohanBlack,
+  },
+  {
+    name: "우정사업본부",
+    image: post,
+  },
+];
 
 function Equipment() {
   return (
@@ -17,33 +36,30 @@ function Equipment() {
           </span>
         </div>
       </div>
-      <div className="area pt-16 md:pt-0 md:pb-48 sm:pb-32 pb-16 grid sm:grid-cols-3 sm:gap-8 gap-4 content-start justify-items-stretch px-3.5 xl:px-0">
-        <div>
-          <img src={sohanRed} alt="img1" />
-          <div className="pt-2 flex">
-            <img src={rectangle} alt="rec" className="pr-2" />
-            <span>소언한복</span>
-          </div>
-        </div>
-        <div>
-          <img src={sohanBlue} alt="img1" />
-          <div className="pt-2 flex">
-            <img src={rectangle} alt="rec" className="pr-2" />
-            <span>소언한복</span>
-          </div>
-        </div>
-        <div>
-          <img src={sohanBlack} alt="img1" />
-          <div className="pt-2 flex">
-            <img src={rectangle} alt="rec" className="pr-2" />
-            <span>소언한복</span>
-          </div>
-        </div>
-        <div>
-          <img src={post} alt="img1" />
-          <div className="pt-2 flex">
-            <img src={rectangle} alt="rec" className="pr-2" />
-            <span>우정사업본부</span>
+      <div className="bg-white">
+        <div className="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+          <div className="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            {products.map((product, i) => (
+              <div key={i} className="group relative">
+                <div className="min-h-80 aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:aspect-none lg:h-80">
+                  <img
+                    src={product.image}
+                    alt="imagetie"
+                    className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                  />
+                </div>
+                <div className="mt-4 flex justify-between">
+                  <div>
+                    <h3 className="text-sm text-gray-700">
+                      <a href="/">
+                        <span aria-hidden="true" className="absolute inset-0" />
+                        {product.name}
+                      </a>
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
