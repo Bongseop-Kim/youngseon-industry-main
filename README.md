@@ -6,6 +6,7 @@
 - 영선산업 프로젝트 <br>
 - 부모님이 운영하시는 넥타이 공장의 자사 사이트를 직접 개발, 웹디자인은 외주,css 외주<br><br>
 [개발한 사이트 바로가기](https://youngseon-industry-ed537.web.app/)<br><br><br>
+[프로젝트 리빌드 : typescript, node.js 변경 진행 중, 깃허브 바로가기](https://github.com/Bongseop-Kim/youngseon)<br><br><br>
 
 
 2. 프로젝트 정리
