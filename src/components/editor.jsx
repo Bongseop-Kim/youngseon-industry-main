@@ -1,5 +1,4 @@
-import React, { useMemo, useEffect, useState } from "react";
-import html2canvas from "html2canvas";
+import React, { useEffect, useState } from "react";
 import { ColorPicker, useColor } from "react-color-palette";
 import "react-color-palette/lib/css/styles.css";
 import close from "../image/close.png";
@@ -7,11 +6,10 @@ import pallete from "../image/pallete.png";
 
 export default function Editor({ initialItem, elStage, initialOnChange, setSelected, selected, setModal }) {
   const [fileUpload, setFileUpload] = React.useState({});
-  const [dlImage, setDLimage] = React.useState(false);
   const [color, setColor] = useColor("hex", "#121212");
   const [PLToggle, setPLToggle] = useState(false);
 
-  useMemo(() => {
+  useEffect(() => {
     initialOnChange((initialItem) => ({
       ...initialItem,
       color: color.hex,
@@ -128,56 +126,6 @@ export default function Editor({ initialItem, elStage, initialOnChange, setSelec
       setFileUpload({});
     }
   }, [fileUpload, initialItem, initialOnChange, elStage]);
-
-  const downloadURI = (uri, name) => {
-    const link = document.createElement("a");
-    link.download = name;
-    link.href = uri;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
-  React.useEffect(() => {
-    if (dlImage && !selected) {
-      saveImage();
-      setDLimage(false);
-    }
-
-    function saveImage() {
-      let element = document.getElementById("myDesign");
-      const windowW = window.innerWidth;
-      if (windowW < 1024) {
-        element.style.position = "fixed";
-        element.style.zIndex = 999;
-        element.style.left = 0;
-      }
-
-      html2canvas(element, {
-        allowTaint: true,
-        removeContainer: false,
-        backgroundColor: null,
-        onclone: function (cloneDoc) {
-          var svg = (window.svg = cloneDoc.querySelector("svg"));
-          if (svg) {
-            svg.outerHTML = svg.outerHTML.replace(/svg:svg/g, "svg");
-          }
-        },
-      }).then((canvas) => {
-        if (windowW < 1024) {
-          element.style.position = null;
-          element.style.zIndex = null;
-          element.style.left = null;
-        }
-        downloadURI(canvas.toDataURL("image/png"), "youngseontie");
-        // document.body.appendChild(canvas);
-      });
-    }
-  }, [dlImage, setDLimage, selected]);
-
-  // React.useEffect(() => {
-  //     console.log('editor loaded')
-  // }, [])
 
   const deleteLabel = (label) => {
     initialOnChange({
@@ -298,11 +246,7 @@ export default function Editor({ initialItem, elStage, initialOnChange, setSelec
             <input id="setTwo_logo" onChange={changeDesign} className="w-full hidden" type="file" />
           </label>
         </div>
-        <div>
-          <button className="bg-blue w-full  text-white p-2 rounded h-[5.625rem]" onClick={() => setDLimage(true)}>
-            이미지 내려받기
-          </button>
-        </div>
+        <div></div>
       </div>
     </div>
   );

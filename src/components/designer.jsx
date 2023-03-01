@@ -4,13 +4,6 @@ import useImage from "use-image";
 import TieView from "./tieColor";
 
 export default function Designer({ initialItem, elStage, initialOnChange, selected, setSelected, checkDeselect }) {
-  const [pageLoaded, setPageLoaded] = React.useState(false);
-
-  React.useEffect(() => {
-    setPageLoaded(true);
-    // console.log('designer loaded')
-  }, []);
-
   return (
     <div className="bg-gray rounded-lg">
       <div id="myDesign" ref={elStage} className="relative p-0 lg:p-10 flex justify-center items-center">
@@ -31,7 +24,6 @@ export default function Designer({ initialItem, elStage, initialOnChange, select
                 setSelected(true);
               }}
               onChange={initialOnChange}
-              width={pageLoaded ? (50 * Math.round((40 * elStage.current.clientWidth) / 100)) / 100 : 0}
             />
           </Layer>
         </Stage>
@@ -42,7 +34,7 @@ export default function Designer({ initialItem, elStage, initialOnChange, select
 }
 
 const DesignView = ({ isSelected, onSelect, design, onChange, data }) => {
-  const [image] = useImage(design.preview, "Anonymous");
+  const [image] = useImage(design.preview);
   const shapeRef = React.useRef();
   const trRef = React.useRef();
 
